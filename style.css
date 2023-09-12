@@ -135,6 +135,10 @@ form input.show-error {
   visibility: hidden;
 }
 
+.show-error {
+  visibility: visible;
+}
+
 @media (min-width: 1023px) {
   body {
     background-image: url('images/bg-intro-desktop.png');
