@@ -25,5 +25,160 @@ body {
   background-color: var(--red);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2rem;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: .8rem;
+  color: white;
+  text-align: center;
 }
+
+main {
+  margin-top: 2rem;
+}
+section {
+  max-height: 800px;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 1.5rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* PROMOTION */
+.promotion {
+  background-color: var(--blue);
+  border-radius: 10px;
+  padding: 1rem 4rem;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.promotion span {
+  font-weight: 600;
+}
+
+/* FORM */
+form {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: .5rem;
+  padding: 1.5rem;
+}
+
+form input {
+  height: 3.2rem;
+  border: .08rem solid var(--grayish-blue);
+  border-radius: 5px;
+  padding-left: 1rem;
+  font-weight: 600;
+}
+
+form input:focus {
+  border: .08rem solid var(--green);
+}
+
+form button {
+  height: 3.2rem;
+  border-radius: 5px;
+  border-color: transparent;
+  font-weight: 700;
+  background-color: var(--green);
+  color: white;
+}
+
+form button:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+
+form p {
+  color: var(--grayish-blue);
+}
+
+form p a {
+  text-decoration: none;
+  color: var(--red);
+  font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+  color: var(--dark-blue);
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+form input.show-error {
+  border: .08rem solid var(--red);
+  background-image: url('images/icon-error.svg');
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+
+.error-text {
+  text-align: end;
+  margin-right: .4rem;
+  color: var(--red);
+  font-style: italic;
+  visibility: hidden;
+}
+
+@media (min-width: 1023px) {
+  body {
+    background-image: url('images/bg-intro-desktop.png');
+  }
+
+  main {
+    margin: auto 9rem;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    column-gap: 3rem;
+  }
+
+  .promotion {
+    max-height: 50px;
+    align-self: end;
+  }
+
+  h1 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    text-align: left;
+  }
+
+  .description {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    text-align: left;
+  }
+
+  .promotion {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  form {
+    grid-column: 2/3;
+    grid-row: 2/7;
+  }
+}
+
+
+
+
