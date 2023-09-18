@@ -10,14 +10,13 @@ form.addEventListener('submit', (event) => {
   event.preventDefault();
   
   validateForm();
-  if(validateForm()) {
-    console.log("fsfsfs");
-  }
 });
 
 function validateForm() {
   for (const input of userInput) {
     let error = input.nextElementSibling;
+
+    // Show error when inputs are blank
     if (input.value === '') {
       if (input === firstName) {
         error.textContent = "First Name cannot be blank";
@@ -29,16 +28,14 @@ function validateForm() {
         error.textContent = "Email cannot be blank"
       }
       showError(input, error);
+    
+    // Check Email Syntax  
     } else if ((input.value !== '') && (input === email)) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if(!(emailRegex.test(input.value))) {
-          error.textContent = "Looks like this is not an email"
-          showError(input, error);
-        } else {
-          showSucces(input, error);
-        }
+        validateEmail(input, error);
     } else {
       showSucces(input, error);
+      alert("Thank you for your registration!");
+      break;
     }
   }
 }
@@ -52,4 +49,15 @@ function showSucces(input, error) {
   input.classList.remove("show-error");
   error.classList.remove("show-error");
 }
+
+function validateEmail(input, error) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(!(emailRegex.test(input.value))) {
+    error.textContent = "Looks like this is not an email"
+    showError(input, error);
+  } else {
+    showSucces(input, error);
+  }
+}
+
 
