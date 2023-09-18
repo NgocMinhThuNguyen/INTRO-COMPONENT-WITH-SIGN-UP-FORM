@@ -8,6 +8,7 @@
   --blue: hsl(248, 32%, 49%);
   --dark-blue: hsl(249, 10%, 26%);
   --grayish-blue: hsl(246, 25%, 77%);
+  --white: #FFFFFF;
 }
 
 * {
@@ -33,7 +34,7 @@ body {
   align-items: center;
   font-family: 'Poppins', sans-serif;
   font-size: .8rem;
-  color: white;
+  color: var(--white);
   text-align: center;
 }
 
@@ -67,7 +68,7 @@ h1 {
 
 /* FORM */
 form {
-  background-color: white;
+  background-color: var(--white);
   border-radius: 10px;
   justify-content: space-around;
   gap: .5rem;
@@ -92,7 +93,7 @@ form button {
   border-color: transparent;
   font-weight: 700;
   background-color: var(--green);
-  color: white;
+  color: var(--white);
 }
 
 form button:hover {
@@ -117,7 +118,7 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
 }
 
 form input.show-error {
