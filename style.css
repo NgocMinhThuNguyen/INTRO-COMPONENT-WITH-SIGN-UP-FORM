@@ -87,6 +87,13 @@ form input:focus {
   border: .08rem solid var(--green);
 }
 
+form input.show-error {
+  border: .08rem solid var(--red);
+  background-image: url('images/icon-error.svg');
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+
 form button {
   height: 3.2rem;
   border-radius: 5px;
@@ -105,6 +112,18 @@ form p {
   color: var(--grayish-blue);
 }
 
+.error-text {
+  text-align: end;
+  margin-right: .4rem;
+  color: var(--red);
+  font-style: italic;
+  visibility: hidden;
+}
+
+.show-error {
+  visibility: visible;
+}
+
 form p a {
   text-decoration: none;
   color: var(--red);
@@ -119,25 +138,6 @@ footer {
 footer a {
   text-decoration: none;
   color: var(--white);
-}
-
-form input.show-error {
-  border: .08rem solid var(--red);
-  background-image: url('images/icon-error.svg');
-  background-repeat: no-repeat;
-  background-position: 95% center;
-}
-
-.error-text {
-  text-align: end;
-  margin-right: .4rem;
-  color: var(--red);
-  font-style: italic;
-  visibility: hidden;
-}
-
-.show-error {
-  visibility: visible;
 }
 
 /* DESKTOP */
