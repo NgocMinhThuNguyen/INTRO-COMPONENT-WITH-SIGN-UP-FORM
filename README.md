@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/NgocMinhThuNguyen/INTRO-COMPONENT-WITH-SIGN-UP-FORM)
-- Live Site URL: [Add live site URL here](https://ngocminhthunguyen.github.io/INTRO-COMPONENT-WITH-SIGN-UP-FORM/)
+- Live Site URL: [Live Site](https://ngocminhthunguyen.github.io/INTRO-COMPONENT-WITH-SIGN-UP-FORM/)
 
 ## Built with
 
